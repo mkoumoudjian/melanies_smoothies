@@ -6,11 +6,6 @@ from snowflake.snowpark.functions import col
 st.title("Customize your Smoothiees")
 st.write("Choose the fruit you want in your custom smoothie!")
 
-#option = st.selectbox('what is your favorites fruits?',
-#('Banana', 'Straberries', 'Peaches'), 2)
-#st.write('You selected:', option) 
-
-
 cnx = st.connection("snowflake")
 session = cnx.session
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
