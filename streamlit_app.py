@@ -11,7 +11,7 @@ cnx = st.connection("snowflake")
 #my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 
 my_dataframe = cnx.query("select * from smoothies.public.fruit_options")
-st.dataframe(df)
+st.dataframe(my_dataframe)
 
 ingridents_lists = st.multiselect('choose up to 5 ingrident', my_dataframe, max_selections =6)
 ingredients_string = ''
