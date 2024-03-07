@@ -22,7 +22,7 @@ if ingridents_lists:
     
     time_to_insert = st.button('submit_order')
     if ingredients_string and time_to_insert:
-        cnx.query(my_insert_stmt)
+        cnx.cursor().execute(my_insert_stmt)
         #session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered,' + NAME_ON_ORDER + '!', icon="✅")
         st.write(my_insert_stmt)
