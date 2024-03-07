@@ -6,8 +6,8 @@ import streamlit as st
 st.title("Customize your Smoothiees")
 st.write("Choose the fruit you want in your custom smoothie!")
 
-#cnx = st.connection("snowflake")
-#session = cnx.session
+cnx = st.connection("snowflake")
+session = cnx.session
 #my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #ingridents_lists = st.multiselect('choose up to 5 ingrident', my_dataframe, max_selections =6)
 #ingredients_string = ''
