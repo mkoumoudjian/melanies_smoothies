@@ -10,7 +10,7 @@ cnx = st.connection("snowflake")
 #session = cnx.session
 #my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 
-df = cnx.query("select * from smoothies.public.fruit_options")
+my_dataframe = cnx.query("select * from smoothies.public.fruit_options")
 st.dataframe(df)
 
 ingridents_lists = st.multiselect('choose up to 5 ingrident', my_dataframe, max_selections =6)
