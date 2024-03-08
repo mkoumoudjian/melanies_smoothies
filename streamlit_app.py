@@ -10,7 +10,7 @@ st.write("Choose the fruit you want in your custom smoothie!")
 
 cnx = st.connection("snowflake")
 my_dataframe = cnx.query("select FRUIT_NAME,SEARCH_ON from smoothies.public.fruit_options")
-#pd_df = my_dataframe.to_pandas()
+pd_df = my_dataframe.to_pandas()
 #st.dataframe(pd_df)
 st.stop()
 ingridents_lists = st.multiselect('choose up to 5 ingrident', my_dataframe, max_selections =6)
