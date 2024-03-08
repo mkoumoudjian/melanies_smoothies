@@ -26,3 +26,7 @@ if ingridents_lists:
         #session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered,' + NAME_ON_ORDER + '!', icon="✅")
         st.write(my_insert_stmt)
+#new for api
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
