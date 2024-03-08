@@ -10,6 +10,7 @@ st.write("Choose the fruit you want in your custom smoothie!")
 
 cnx = st.connection("snowflake")
 #my_dataframe = cnx.query("select FRUIT_NAME, SEARCH_ON from smoothies.public.fruit_options")
+session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 pd_df = my_dataframe.to_pandas()
 #st.dataframe(pd_df)
